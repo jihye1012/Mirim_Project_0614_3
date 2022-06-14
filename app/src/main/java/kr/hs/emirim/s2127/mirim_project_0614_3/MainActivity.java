@@ -15,11 +15,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         vFlip=findViewById(R.id.vflip);
+        vFlip.setFlipInterval(1);
         Button btnPrev=findViewById(R.id.btn_prev);
         Button btnNext=findViewById(R.id.btn_next);
 
         btnPrev.setOnClickListener(btnListener);
-        btnPrev.setOnClickListener(btnListener);
+        btnNext.setOnClickListener(btnListener);
     }
 
     View.OnClickListener btnListener=new View.OnClickListener() {
@@ -27,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.btn_prev:
-                    vFlip.showPrevious();
+                    vFlip.startFlipping();
                     break;
                 case R.id.btn_next:
-                    vFlip.showNext();
+                    vFlip.stopFlipping();
                     break;
             }
         }
