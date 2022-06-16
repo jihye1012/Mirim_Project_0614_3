@@ -14,16 +14,26 @@
         android:gravity="center"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn_prev"
+            android:id="@+id/btn_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:text="사진보기 시작"/>
+            android:text="시작"/>
         <Button
-            android:id="@+id/btn_next"
+            android:id="@+id/btn_stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사진보기 정지"/>
+            android:text="정지"/>
+        <EditText
+            android:id="@+id/edit_interval"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초 설정"/>
     </LinearLayout>
     <ViewFlipper
         android:id="@+id/vflip"
